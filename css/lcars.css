@@ -89,8 +89,10 @@
     }
 
     select>button {
-        color: var(--color);
+        font-size: var(--font-size-1);
+        font-weight: var(--font-weight-2);
         background-color: transparent;
+        color: var(--color);
         border: none;
         padding: 0;
         min-width: 0;
