@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/theme-toggle.js"></script>
+    <title>LCARS - Components</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                LCARS CSS
+            </div>
+            <menu>
+                <a href="/">Home</a>
+                <a href="/typography.html">Typography</a>
+                <a href="/components.html">Components</a>
+                <a href="/forms.html">Forms</a>
+            </menu>
+            <div id="theme-toggle" class="theme-toggle" data-on-click="$_theme = $_theme === 'dark' ? 'light' : 'dark'">
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                    <!-- https://feathericons.com/?query=sun -->
+                    <mask id="moon">
+                        <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                        <circle cx="40" cy="8" r="11" fill="black" />
+                    </mask>
+                    <circle id="sun" cx="12" cy="12" r="11" mask="url(#moon)" />
+                    <g id="sun-beams">
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </g>
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Components</h1>
+            <p>
+                This page will demonstrate some more advanced HTML tags for structuring content.
+            </p>
+
+
+            <h2>Horizontal rule</h2>
+            The <kbd>&lt;hr&gt;</kbd> tag renders a horizontal rule.
+            <p>Paragraph before hr</p>
+            <hr>
+            <p>Paragraph after hr</p>
+
+            <h2>Blockquote</h2>
+            <blockquote>
+                “Design is a funny word. Some people think
+                design means how it looks. But of course, if
+                you dig deeper, it's really how it works.”
+                <cite>— Steve Jobs</cite>
+            </blockquote>
+
+            <h2>Images</h2>
+            <p>Here is a standard image with an <kbd>img</kbd> tag.</p>
+            <img src="images/NCC-1701-D.jpeg"
+                alt="Star Trek Enterprise D with code name NCC-1701-D on the black backgroud of space">
+            <p>Here is a standard image with an <kbd>img</kbd> tag and a class of <mark>max-width</mark> to fill the
+                width of
+                the parent container.</p>
+            <img src="images/NCC-1701-D model.jpeg" alt="A model of NCC-1701-D on a stand with a white background"
+                class="max-width">
+            <p>
+                Placing an image inside a <kbd>figure</kbd> tag will center the image. Text inside a
+                <kbd>figcaption</kbd> tag will a have an italic font style.
+            </p>
+            <figure>
+                <img src="images/NCC-1701-D.jpeg"
+                    alt="Star Trek Enterprise D with code name NCC-1701-D on the black backgroud of space">
+                <figcaption>Star Trek enterprise D (NCC-1701-D) </figcaption>
+            </figure>
+
+            <h2>Code blocks</h2>
+            <p>
+                Here is a <kbd>code</kbd> tag inside a <kbd>pre</kbd> tag.
+            </p>
+            <pre><code class="language-sql">-- Create table
+CREATE TABLE employee
+(
+    id     INT PRIMARY KEY NOT NULL,
+    detail TEXT
+);
+
+-- Insert records
+INSERT INTO employee(id, detail)
+VALUES (1, 'Employee with first name John, last name Smith working for department IT and is active');
+
+INSERT INTO employee(id, detail)
+VALUES (2, 'Employee with first name Jane, last name Doe working for department HR and is inactive');
+</code></pre>
+            <p>
+                Here is an <code>inline</code> <kbd>code</kbd> tag.
+            </p>
+
+            <h2>Lists</h2>
+            <p>Unordered Lists</p>
+            <ul>
+                <li>Item one</li>
+                <li>Item two</li>
+                <li>Item three</li>
+            </ul>
+            <p>Ordered Lists</p>
+            <ol>
+                <li>Item one</li>
+                <li>Item two</li>
+                <li>Item three</li>
+            </ol>
+
+            <h2>Tables</h2>
+            <p>
+                It is suggested to use <mark>thead</mark> and <mark>tbody</mark> tags as the styles depend on this.
+            </p>
+            <div class="overflow-x">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="center">Name</th>
+                            <th scope="col" class="center">Phone</th>
+                            <th scope="col" class="center">Email</th>
+                            <th scope="col" class="center">Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colton Boyle</td>
+                            <td>(948) 870-4245</td>
+                            <td>suspendisse.eleifend@protonmail.couk</td>
+                            <td>Indonesia</td>
+                        </tr>
+                        <tr>
+                            <td>Gabriel Herrera</td>
+                            <td>(844) 846-3120</td>
+                            <td>ante.nunc@aol.com</td>
+                            <td>Ireland</td>
+                        </tr>
+                        <tr>
+                            <td>Yeo Murphy</td>
+                            <td>(789) 221-9558</td>
+                            <td>in.lorem.donec@icloud.edu</td>
+                            <td>Poland</td>
+                        </tr>
+                        <tr>
+                            <td>Elton Hodges</td>
+                            <td>1-227-811-6393</td>
+                            <td>aliquam.ultrices@google.org</td>
+                            <td>Costa Rica</td>
+                        </tr>
+                        <tr>
+                            <td>Wayne Casey</td>
+                            <td>1-217-852-3770</td>
+                            <td>non@aol.net</td>
+                            <td>France</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="overflow-x">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Phone:</th>
+                            <td>+31 6 8485 4382</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>gadnex@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>Website:</th>
+                            <td><a href="https://gadnex.github.io/">https://gadnex.github.io/</a></td>
+                        </tr>
+                        <tr>
+                            <th>GitHub:</th>
+                            <td><a href="https://github.com/Gadnex">https://github.com/Gadnex</a></td>
+                        </tr>
+                        <tr>
+                            <th>LinkedIn:</th>
+                            <td><a
+                                    href="https://www.linkedin.com/in/william-gadney-003580119/">https://www.linkedin.com/in/william-gadney-003580119/</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="overflow-x">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Phone:</td>
+                            <td>+31 6 8485 4382</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>gadnex@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Website:</td>
+                            <td><a href="https://gadnex.github.io/">https://gadnex.github.io/</a></td>
+                        </tr>
+                        <tr>
+                            <td>GitHub:</td>
+                            <td><a href="https://github.com/Gadnex">https://github.com/Gadnex</a></td>
+                        </tr>
+                        <tr>
+                            <td>LinkedIn:</td>
+                            <td><a
+                                    href="https://www.linkedin.com/in/william-gadney-003580119/">https://www.linkedin.com/in/william-gadney-003580119/</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </main>
+    <footer>
+        &copy; 2025 - William Gadney
+    </footer>
+</body>
+
+</html>

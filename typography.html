@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/theme-toggle.js"></script>
+    <title>LCARS - Typography</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                LCARS CSS
+            </div>
+            <menu>
+                <a href="/">Home</a>
+                <a href="/typography.html">Typography</a>
+                <a href="/components.html">Components</a>
+                <a href="/forms.html">Forms</a>
+            </menu>
+            <div id="theme-toggle" class="theme-toggle" data-on-click="$_theme = $_theme === 'dark' ? 'light' : 'dark'">
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                    <!-- https://feathericons.com/?query=sun -->
+                    <mask id="moon">
+                        <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                        <circle cx="40" cy="8" r="11" fill="black" />
+                    </mask>
+                    <circle id="sun" cx="12" cy="12" r="11" mask="url(#moon)" />
+                    <g id="sun-beams">
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </g>
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Typography</h1>
+            <p>
+                This page will demonstrate all the default typography styles supported by my CSS. I have added some
+                <em>Lorem ipsum</em> text to add some space between the different heading levels and appear more
+                realistic.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis temporibus officia eum
+                repellendus reiciendis, ex corporis similique soluta nisi natus id mollitia, nam ullam! Modi tempora
+                perferendis, culpa pariatur enim perspiciatis consectetur praesentium ex officiis id laborum qui?
+                Distinctio rem, excepturi autem esse id amet a similique eius quaerat.
+            </p>
+
+            <h2>Heading 2</h2>
+            <p>
+                This section will show all the headings from h2 to h6 as h1 to h3 is already shown above.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis temporibus officia eum
+                repellendus reiciendis, ex corporis similique soluta nisi natus id mollitia, nam ullam! Modi tempora
+                perferendis, culpa pariatur enim perspiciatis consectetur praesentium ex officiis id laborum qui?
+                Distinctio rem, excepturi autem esse id amet a similique eius quaerat.
+            </p>
+
+            <h3>Heading 3</h3>
+            <p>
+                This is an example of an h3 heading.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis temporibus officia eum
+                repellendus reiciendis, ex corporis similique soluta nisi natus id mollitia, nam ullam! Modi tempora
+                perferendis, culpa pariatur enim perspiciatis consectetur praesentium ex officiis id laborum qui?
+                Distinctio rem, excepturi autem esse id amet a similique eius quaerat.
+            </p>
+
+            <h4>Heading 4</h4>
+            <p>
+                This is an example of an h4 heading.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis temporibus officia eum
+                repellendus reiciendis, ex corporis similique soluta nisi natus id mollitia, nam ullam! Modi tempora
+                perferendis, culpa pariatur enim perspiciatis consectetur praesentium ex officiis id laborum qui?
+                Distinctio rem, excepturi autem esse id amet a similique eius quaerat.
+            </p>
+
+            <h5>Heading 5</h5>
+            <p>
+                This is an example of an h5 heading.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis temporibus officia eum
+                repellendus reiciendis, ex corporis similique soluta nisi natus id mollitia, nam ullam! Modi tempora
+                perferendis, culpa pariatur enim perspiciatis consectetur praesentium ex officiis id laborum qui?
+                Distinctio rem, excepturi autem esse id amet a similique eius quaerat.
+            </p>
+
+            <h6>Heading 6</h6>
+            <p>
+                This is an example of an h6 heading.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis temporibus officia eum
+                repellendus reiciendis, ex corporis similique soluta nisi natus id mollitia, nam ullam! Modi tempora
+                perferendis, culpa pariatur enim perspiciatis consectetur praesentium ex officiis id laborum qui?
+                Distinctio rem, excepturi autem esse id amet a similique eius quaerat.
+            </p>
+
+            <div class="page-break-after"></div>
+
+            <h2>Heading group</h2>
+            <p>
+                Inside a <kbd>&lt;hgroup&gt;</kbd>, margins are collapsed, and the :last-child is muted.
+            </p>
+            <div class="container">
+                <hgroup>
+                    <h3>Heading in hgroup</h3>
+                    <p>Last paragraph (p) in hgroup</p>
+                </hgroup>
+            </div>
+
+            <h2>Inline text elements</h2>
+            <div class="cols-2">
+                <p>
+                    Normal
+                </p>
+                <p>
+                    <a href="#">Anchor</a> <kbd>&lt;a href="#"&gt;</kbd>
+                </p>
+                <p>
+                    <abbr title="Abreviation">Abbr.</abbr> <kbd>&lt;abbr title="Abreviation"&gt;</kbd>
+                </p>
+                <p>
+                    <mark>Highlight</mark> <kbd>&lt;mark&gt;</kbd>
+                </p>
+                <p>
+                    <strong>Bold</strong> <kbd>&lt;strong&gt;</kbd> <kbd>&lt;b&gt;</kbd>
+                </p>
+                <p>
+                    <s>Strikethrough</s> <kbd>&lt;s&gt;</kbd>
+                </p>
+                <p>
+                    <em>Italic</em> <kbd>&lt;em&gt;</kbd> <kbd>&lt;i&gt;</kbd> <kbd>&lt;cite&gt;</kbd>
+                </p>
+                <p>
+                    <small>Small</small> <kbd>&lt;small&gt;</kbd>
+                </p>
+                <p>
+                    <del>Deleted</del> <kbd>&lt;del&gt;</kbd>
+                </p>
+                <p>
+                    Text<sub>Sub</sub> <kbd>&lt;sub&gt;</kbd>
+                </p>
+                <p>
+                    <ins>Inserted</ins> <kbd>&lt;ins&gt;</kbd>
+                </p>
+                <p>
+                    Text<sup>Sup</sup> <kbd>&lt;sup&gt;</kbd>
+                </p>
+                <p>
+                    <kbd>Ctrl + s</kbd> <kbd>&lt;kbd&gt;</kbd>
+                </p>
+                <p>
+                    <u>Underline</u> <kbd>&lt;u&gt;</kbd>
+                </p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        &copy; 2025 - William Gadney
+    </footer>
+</body>
+
+</html>

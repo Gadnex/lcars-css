@@ -1,0 +1,9 @@
+@import "https://unpkg.com/open-props";
+@import "normalize.css";
+@import "lcars.css";
+
+/* :root {
+    --brand-color: light-dark(var(--green-5), var(--green-7));
+    --brand-color-contrast: light-dark(var(--green-9), var(--green-3));
+    --brand-color-accent: light-dark(var(--green-7), var(--green-5));
+} */

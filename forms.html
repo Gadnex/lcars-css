@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/theme-toggle.js"></script>
+    <title>LCARS - Forms</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                LCARS CSS
+            </div>
+            <menu>
+                <a href="/">Home</a>
+                <a href="/typography.html">Typography</a>
+                <a href="/components.html">Components</a>
+                <a href="/forms.html">Forms</a>
+            </menu>
+            <div id="theme-toggle" class="theme-toggle" data-on-click="$_theme = $_theme === 'dark' ? 'light' : 'dark'">
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                    <!-- https://feathericons.com/?query=sun -->
+                    <mask id="moon">
+                        <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                        <circle cx="40" cy="8" r="11" fill="black" />
+                    </mask>
+                    <circle id="sun" cx="12" cy="12" r="11" mask="url(#moon)" />
+                    <g id="sun-beams">
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </g>
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Forms</h1>
+
+            <h2>Buttons</h2>
+            <p>
+                We make provision for <kbd>&lt;button&gt;</kbd>, <kbd>&lt;input type="submit"&gt;</kbd> and
+                <kbd>&lt;a role="button"&gt;</kbd> tags to be styled as a button.
+            </p>
+            <p>
+                <button>Button</button>
+                <input type="submit" value="Input">
+                <a href="#" role="button">Anchor</a>
+                <br>
+                <button>Button next line</button>
+            </p>
+
+            <h2>Forms</h2>
+            <p>
+                Here is an example form with the different stules
+            </p>
+            <form action="#" class="container">
+                <label>
+                    Text
+                    <input type="text" placeholder="Placeholder">
+                </label>
+                <label>
+                    Disabled input
+                    <input type="text" placeholder="Disabled" aria-label="Disabled input" disabled>
+                </label>
+                <label>
+                    Read-only input
+                    <input type="text" value="Read-only" aria-label="Read-only input" readonly>
+                </label>
+                <label>
+                    Valid input
+                    <input type="text" aria-invalid="false" value='aria-invalid="false"'>
+                </label>
+                <label>
+                    Invalid input
+                    <input type="text" aria-invalid="true" value='aria-invalid="true"'>
+                    <ul>
+                        <li>Value is required</li>
+                        <li>Must be at least 3 characters long</li>
+                        <li>Must contain a number</li>
+                    </ul>
+                </label>
+                <label>
+                    Email
+                    <input type="email">
+                </label>
+                <label>
+                    Number
+                    <input type="number">
+                </label>
+                <label>
+                    Password
+                    <input type="password">
+                </label>
+                <label>
+                    Tel
+                    <input type="tel">
+                </label>
+                <label>
+                    Url
+                    <input type="url">
+                </label>
+                <label>
+                    Date
+                    <input type="date" name="date" aria-label="Date">
+                </label>
+                <label>
+                    Datetime-local
+                    <input type="datetime-local" name="datetime-local" aria-label="Datetime local">
+                </label>
+                <label>
+                    Month
+                    <input type="month" name="month" aria-label="Month">
+                </label>
+                <label>
+                    Time
+                    <input type="time" name="time" aria-label="Time">
+                </label>
+                <label>
+                    Search
+                    <input type="search" name="search" placeholder="Search" aria-label="Search" />
+                </label>
+                <label>
+                    Color
+                    <input type="color" value="#00ffaa" aria-label="Color picker">
+                </label>
+                <label>
+                    File
+                    <input type="file">
+                </label>
+                <label>
+                    Textarea
+                    <textarea placeholder="Placeholder" aria-label="Placeholder"></textarea>
+                </label>
+                <label>
+                    Disabled textarea
+                    <textarea placeholder="Disabled" aria-label="Disabled textarea" disabled></textarea>
+                </label>
+                <label>
+                    Read-only textarea
+                    <textarea placeholder="Read-only" aria-label="Read-only textarea" readonly></textarea>
+                </label>
+                <label>
+                    Valid textarea
+                    <textarea placeholder='aria-invalid="false"' aria-invalid="false"></textarea>
+                </label>
+                <label>
+                    Invalid textarea
+                    <textarea placeholder='aria-invalid="true"' aria-invalid="true"></textarea>
+                    <ul>
+                        <li>Value is required</li>
+                        <li>Must be at least 30 characters long</li>
+                    </ul>
+                </label>
+                <label>
+                    Select
+                    <select id="pet-select">
+                        <button>
+                            <selectedcontent></selectedcontent>
+                        </button>
+                        <option value="">Please select a pet</option>
+                        <option value="cat">
+                            <span class="icon" aria-hidden="true">🐱</span><span class="option-label">Cat</span>
+                        </option>
+                        <option value="dog">
+                            <span class="icon" aria-hidden="true">🐶</span><span class="option-label">Dog</span>
+                        </option>
+                        <option value="hamster">
+                            <span class="icon" aria-hidden="true">🐹</span><span class="option-label">Hamster</span>
+                        </option>
+                        <option value="chicken">
+                            <span class="icon" aria-hidden="true">🐔</span><span class="option-label">Chicken</span>
+                        </option>
+                        <option value="fish">
+                            <span class="icon" aria-hidden="true">🐟</span><span class="option-label">Fish</span>
+                        </option>
+                        <option value="snake">
+                            <span class="icon" aria-hidden="true">🐍</span><span class="option-label">Snake</span>
+                        </option>
+                    </select>
+                </label>
+                <label>
+                    Select disabled
+                    <select disabled>
+                        <option>Italian</option>
+                    </select>
+                </label>
+                <label>
+                    Select valid
+                    <select aria-invalid="false">
+                        <option>aria-invalid="false"</option>
+                    </select>
+                </label>
+                <label>
+                    Select invalid
+                    <select aria-invalid="true">
+                        <option>aria-invalid="true"</option>
+                    </select>
+                </label>
+                <label>
+                    Range
+                    <input type="range" />
+                </label>
+                <fieldset>
+                    <legend>Checkboxes</legend>
+                    <label>
+                        <input type="checkbox" name="english" checked />
+                        English
+                    </label>
+                    <label>
+                        <input type="checkbox" name="french" checked />
+                        French
+                    </label>
+                    <label>
+                        <input type="checkbox" name="mandarin" />
+                        Mandarin
+                    </label>
+                    <label>
+                        <input type="checkbox" name="thai" />
+                        Thai
+                    </label>
+                    <label aria-disabled="true">
+                        <input type="checkbox" name="dothraki" disabled />
+                        Dothraki
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Radio buttons</legend>
+                    <label>
+                        <input type="radio" name="language" checked />
+                        English
+                    </label>
+                    <label>
+                        <input type="radio" name="language" />
+                        French
+                    </label>
+                    <label>
+                        <input type="radio" name="language" />
+                        Mandarin
+                    </label>
+                    <label>
+                        <input type="radio" name="language" />
+                        Thai
+                    </label>
+                    <label aria-disabled="true">
+                        <input type="radio" name="language" disabled />
+                        Dothraki
+                    </label>
+                </fieldset>
+                <fieldset class="flex-column">
+                    <legend>Fieldset flex-column</legend>
+                    <label>
+                        <input type="checkbox" name="english" checked />
+                        English
+                    </label>
+                    <label>
+                        <input type="checkbox" name="french" checked />
+                        French
+                    </label>
+                    <label>
+                        <input type="checkbox" name="mandarin" />
+                        Mandarin
+                    </label>
+                    <label>
+                        <input type="checkbox" name="thai" />
+                        Thai
+                    </label>
+                    <label aria-disabled="true">
+                        <input type="checkbox" name="dothraki" disabled />
+                        Dothraki
+                    </label>
+                </fieldset>
+                <fieldset aria-invalid="false">
+                    <legend>Fieldset valid</legend>
+                    <label>
+                        <input type="checkbox" name="english" checked />
+                        English
+                    </label>
+                    <label>
+                        <input type="checkbox" name="french" checked />
+                        French
+                    </label>
+                    <label>
+                        <input type="checkbox" name="mandarin" />
+                        Mandarin
+                    </label>
+                    <label>
+                        <input type="checkbox" name="thai" />
+                        Thai
+                    </label>
+                    <label aria-disabled="true">
+                        <input type="checkbox" name="dothraki" disabled />
+                        Dothraki
+                    </label>
+                </fieldset>
+                <fieldset aria-invalid="true">
+                    <legend>Fieldset invalid</legend>
+                    <label>
+                        <input type="checkbox" name="english" checked />
+                        English
+                    </label>
+                    <label>
+                        <input type="checkbox" name="french" checked />
+                        French
+                    </label>
+                    <label>
+                        <input type="checkbox" name="mandarin" />
+                        Mandarin
+                    </label>
+                    <label>
+                        <input type="checkbox" name="thai" />
+                        Thai
+                    </label>
+                    <label aria-disabled="true">
+                        <input type="checkbox" name="dothraki" disabled />
+                        Dothraki
+                    </label>
+                </fieldset>
+                <footer>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </footer>
+            </form>
+        </article>
+    </main>
+    <footer>
+        &copy; 2025 - William Gadney
+    </footer>
+</body>
+
+</html>
