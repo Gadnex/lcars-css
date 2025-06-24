@@ -338,7 +338,6 @@
                         font-size: var(--font-size-fluid-1);
                         font-weight: var(--font-weight-9);
                         color: var(--brand-color);
-                        ;
                     }
                 }
 
@@ -583,6 +582,31 @@
         :where(tfoot button) {
             padding-block: var(--size-1);
             padding-inline: var(--size-3);
+        }
+
+        menu[popover] {
+            position: absolute;
+            position-area: end span-end;
+            position-try-fallbacks: start span-end;
+            width: anchor-size(width);
+            margin-block: var(--size-1);
+            border: 2px solid var(--surface-2);
+            border-radius: var(--radius-2);
+
+            a {
+                text-decoration: none;
+                padding: var(--size-2);
+            }
+
+            a:hover {
+                background-color: var(--surface-1);
+                border-radius: var(--radius-2);
+            }
+        }
+
+        menu[popover]:popover-open {
+            display: inline-flex;
+            flex-direction: column;
         }
     }
 }
